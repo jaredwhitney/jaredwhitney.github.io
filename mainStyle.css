@@ -1,0 +1,37 @@
+* {
+	color: #000000;
+	background-color: #EFEFEF;
+}
+
+.navButton {
+	text-align: center;
+	text-decoration: none;
+	font-size: 24px;
+	padding: 2px;
+	color: #000000;
+	background-color: #FFFFFF;
+}
+
+.rightAlign {
+	float: right;
+	margin-right: 2px;
+}
+
+.contentBox {
+	width: fill;
+	padding: 2px;
+	margin: 10px;
+}
+
+#borderElement {
+	border: 2px solid #DFDFDF;
+	background: #FFFFFF;
+}
+
+div:not(#navInclude) * {
+	background-color: #FFFFFF;
+}
+
+div:not(#navInclude) {
+	background-color: #FFFFFF;
+}
