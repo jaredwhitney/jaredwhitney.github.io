@@ -1,3 +1,4 @@
+var flipOnLoad = false;
 var inited = false;
 setupPage();
 inited = true;
@@ -38,8 +39,11 @@ function toggleNightMode() {
 			sheet.insertRule(newStyle, ind);
 	//	}
 	}
+	if (!inited)
+		flipOnLoad = true;
 	if (inited)
 	{
+		flipImages();
 		var oldNightMode = localStorage.getItem("net.jaredwhitney.nightModeEnable");
 		if (oldNightMode=="true")
 			localStorage.setItem("net.jaredwhitney.nightModeEnable", "false");
@@ -54,4 +58,16 @@ function setupPage(){
 		toggleNightMode();
 	}
 }
-
+var images;
+function flipImages(){
+	images = document.getElementsByTagName("img");
+	var ind = 0;
+	for (; ind < images.length ; ind++) {
+		if (images[ind].className=="swappableImage") {
+			if (!images[ind].src.contains("NightMode"))
+				images[ind].src = images[ind].src.split(".")[0] + "NightMode." + images[ind].src.split(".")[1];
+			else
+				images[ind].src = images[ind].src.split("NightMode.")[0] + "." + images[ind].src.split("NightMode.")[1];
+		}
+	}
+}
