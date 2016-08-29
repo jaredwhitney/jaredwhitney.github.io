@@ -64,8 +64,11 @@ function flipImages(){
 	var ind = 0;
 	for (; ind < images.length ; ind++) {
 		if (images[ind].className=="swappableImage") {
-			if (!images[ind].src.contains("NightMode"))
-				images[ind].src = images[ind].src.split(".")[0] + "NightMode." + images[ind].src.split(".")[1];
+			if (!images[ind].src.contains("NightMode")) {
+				var dind = images[ind].src.lastIndexOf(".");
+				var imparts = [images[ind].src.slice(0, dind), images[ind].src.slice(dind+1)];
+				images[ind].src = imparts[0] + "NightMode." + imparts[1];
+			}
 			else
 				images[ind].src = images[ind].src.split("NightMode.")[0] + "." + images[ind].src.split("NightMode.")[1];
 		}
