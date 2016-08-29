@@ -35,3 +35,7 @@ div:not(#navInclude) * {
 div:not(#navInclude) {
 	background-color: #FFFFFF;
 }
+
+.padded {
+	padding-bottom:20px;
+}
