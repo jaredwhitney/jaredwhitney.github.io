@@ -64,7 +64,7 @@ function flipImages(){
 	var ind = 0;
 	for (; ind < images.length ; ind++) {
 		if (images[ind].className=="swappableImage") {
-			if (!images[ind].src.contains("NightMode")) {
+			if (images[ind].src.indexOf("NightMode")==-1) {
 				var dind = images[ind].src.lastIndexOf(".");
 				var imparts = [images[ind].src.slice(0, dind), images[ind].src.slice(dind+1)];
 				images[ind].src = imparts[0] + "NightMode." + imparts[1];
