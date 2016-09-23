@@ -28,6 +28,22 @@
 	background: #FFFFFF;
 }
 
+#navInclude {
+	background-color: transparent;
+}
+
+body {
+	background-color: transparent;
+}
+
+h1 {
+	background-color: transparent;
+}
+
+h1 * {
+	background-color: transparent;
+}
+
 div:not(#navInclude) * {
 	background-color: #FFFFFF;
 }

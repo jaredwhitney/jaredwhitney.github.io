@@ -37,4 +37,5 @@ $(document).ready(function()
 		
 		if (flipOnLoad)
 			flipImages();
+		
 });
