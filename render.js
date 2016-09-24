@@ -28,6 +28,8 @@ $(document).ready(function() {
 
 function drawScreen()
 {
+	img.width = window.innerWidth;
+	img.height = window.innerHeight;
 	clear();
 	for (var q = 0; q < tridata.length; q++)
 	{
