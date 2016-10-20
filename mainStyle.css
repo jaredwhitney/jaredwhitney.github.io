@@ -19,7 +19,7 @@
 
 .contentBox {
 	width: fill;
-	padding: 2px;
+	padding: 6px;
 	margin: 10px;
 }
 
@@ -54,4 +54,17 @@ div:not(#navInclude) {
 
 .padded {
 	padding-bottom:20px;
+}
+
+.scalingImage {
+	max-width: 96%;
+	max-height: 96%;
+	display: block;
+	margin: auto;
+}
+.scalingVideo {
+	width: 38vw;
+	height: 21vw;
+	display: block;
+	margin: auto;
 }
