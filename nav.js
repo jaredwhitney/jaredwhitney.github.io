@@ -7,6 +7,10 @@ $(document).ready(function()
 		"	jaredwhitney.net" +
 		"</center> </h1>" +
 
+		"<button type=\"button\" class=\"navButton\" id=\"borderElement\" onClick=\"jumpTo('/')\">" +
+			"Home" +
+		"</button>" +
+		
 		"<button type=\"button\" class=\"navButton\" id=\"borderElement\" onClick=\"jumpTo('art.html')\">" +
 			"Art" +
 		"</button>" +

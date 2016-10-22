@@ -40,8 +40,7 @@ function drawScreen()
 }
 function clear()
 {
-	//img.width = img.width;
-	graphics.fillStyle = localStorage.getItem("net.jaredwhitney.nightModeEnable")=="true"?"#202020":"#EFEFEF";
+	graphics.fillStyle = "rgba(0,0,0,0)";
 	graphics.beginPath();
 	graphics.fillRect(0, 0, img.width, img.height);
 	graphics.stroke();
@@ -60,10 +59,10 @@ function goDrawTri(tri)
 	graphics.strokeStyle = "#00FF00";
 	fx = tri.verts[0].x/(tri.verts[0].z/160.);
 	fy = tri.verts[0].y/(tri.verts[0].z/160.);
-	graphics.moveTo(fx+img.width/2, fy+img.height-100);
-	graphics.lineTo(tri.verts[1].x/(tri.verts[1].z/160.)+img.width/2, tri.verts[1].y/(tri.verts[1].z/160.)+img.height-100);
-	graphics.lineTo(tri.verts[2].x/(tri.verts[2].z/160.)+img.width/2, tri.verts[2].y/(tri.verts[2].z/160.)+img.height-100);
-	graphics.lineTo(fx+img.width/2, fy+img.height-100);
+	graphics.moveTo(fx+img.width/2, fy+img.height*2/3);
+	graphics.lineTo(tri.verts[1].x/(tri.verts[1].z/160.)+img.width/2, tri.verts[1].y/(tri.verts[1].z/160.)+img.height*2/3);
+	graphics.lineTo(tri.verts[2].x/(tri.verts[2].z/160.)+img.width/2, tri.verts[2].y/(tri.verts[2].z/160.)+img.height*2/3);
+	graphics.lineTo(fx+img.width/2, fy+img.height*2/3);
 	graphics.stroke();
 }
 function rotateTri(tri, rads)

@@ -58,7 +58,7 @@ div:not(#navInclude) * {
 }
 
 div:not(#navInclude):not(.solid) {
-	background-color: #FFFFFFA0;
+	background-color: rgba(255, 255, 255, 0.63);
 }
 
 center {
