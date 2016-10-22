@@ -20,6 +20,7 @@ function toggleNightMode() {
 				if (oldStyleArray[j].trim()=="")
 					continue;
 				var splits = oldStyleArray[j].split("rgb(");
+				var asplits = oldStyleArray[j].split("rgba(");
 				var type = splits[0].split(":")[0].trim();
 				if (splits.length >= 2)
 				{
@@ -29,6 +30,19 @@ function toggleNightMode() {
 						var colorData = val.slice(0, -1).split(",");
 						for (var q = 0; q < colorData.length; q++)
 							newStyle += 255-colorData[q] + ",";
+						newStyle = newStyle.slice(0, -1) + ");";
+						continue;
+					}
+				}
+				else if (asplits.length >= 2)
+				{
+					var val = asplits[1].trim();
+					if (type=="background-color"||type=="background"||type=="color") {
+						newStyle += type + ":" + asplits[0].split(":")[1] + "rgba(";
+						var colorData = val.slice(0, -1).split(",");
+						for (var q = 0; q < colorData.length-1; q++)
+							newStyle += 255-colorData[q] + ",";
+						newStyle += colorData[3] + ",";
 						newStyle = newStyle.slice(0, -1) + ");";
 						continue;
 					}

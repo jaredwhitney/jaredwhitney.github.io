@@ -33,7 +33,9 @@ $(document).ready(function()
 	
 		"<button type=\"button\" class=\"navButton rightAlign\" id= \"borderElement\" onClick=\"toggleNightMode();\" style=\"background: #808080;\">" +
 			"<image src=\"nightmode.png\" width=20px height=20px/>" +
-		"</button>";
+		"</button>" +
+		
+		"<img class=\"swappableImage\" src=\"img\\bg.jpg\" style=\"position:fixed;width:100%;height:100%;z-index:-1;top:0;left:0;display:inline-block;\"/>";
 		
 		if (flipOnLoad)
 			flipImages();
