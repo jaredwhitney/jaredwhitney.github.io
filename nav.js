@@ -19,17 +19,9 @@ $(document).ready(function()
 		"<button type=\"button\" class=\"navButton\" id=\"borderElement\" onClick=\"jumpTo('programming.html')\">" +
 			"Programming" +
 		"</button>" +
-	
-		"<button type=\"button\" class=\"navButton\" id=\"borderElement\" onClick=\"jumpTo('writing.html')\">" +
-			"Writing" +
-		"</button>" +
-	
+		
 		"<button type=\"button\" class=\"navButton\" id=\"borderElement\" onClick=\"jumpTo('music.html')\">" +
 			"Music" +
-		"</button>" +
-	
-		"<button type=\"button\" class=\"navButton\" id=\"borderElement\" onClick=\"jumpTo('languages.html')\">" +
-			"Languages" +
 		"</button>" +
 	
 		"<button type=\"button\" class=\"navButton\" id=\"borderElement\" onClick=\"jumpTo('http://www.github.com/jaredwhitney')\">" +
