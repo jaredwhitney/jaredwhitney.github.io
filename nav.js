@@ -23,6 +23,14 @@ $(document).ready(function()
 		"<button type=\"button\" class=\"navButton\" id=\"borderElement\" onClick=\"jumpTo('music.html')\">" +
 			"Music" +
 		"</button>" +
+		
+		"<button type=\"button\" class=\"navButton\" id=\"borderElement\" onClick=\"jumpTo('languages.html')\">" +
+			"Language" +
+		"</button>" +
+		
+		"<button type=\"button\" class=\"navButton\" id=\"borderElement\" onClick=\"jumpTo('writing.html')\">" +
+			"Poetry" +
+		"</button>" +
 	
 		"<button type=\"button\" class=\"navButton\" id=\"borderElement\" onClick=\"jumpTo('http://www.github.com/jaredwhitney')\">" +
 			"<img class=\"swappableImage\" src=\"img\\githubMark.png\" width=20px height=20px> Github" +

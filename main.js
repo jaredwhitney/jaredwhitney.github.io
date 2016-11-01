@@ -77,7 +77,7 @@ function flipImages(){
 	images = document.getElementsByTagName("img");
 	var ind = 0;
 	for (; ind < images.length ; ind++) {
-		if (images[ind].className=="swappableImage") {
+		if (images[ind].className.indexOf("swappableImage")!=-1) {
 			if (images[ind].src.indexOf("NightMode")==-1) {
 				var dind = images[ind].src.lastIndexOf(".");
 				var imparts = [images[ind].src.slice(0, dind), images[ind].src.slice(dind+1)];
